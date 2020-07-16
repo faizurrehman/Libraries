@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1594866780 source:d:\projects\libraries\dmm\dmm.c
+	"dmm.h"
+	<stdlib.h>
+
+1594866778 d:\projects\libraries\dmm\dmm.h
+	<inttypes.h>
+

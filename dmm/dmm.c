@@ -1,0 +1,77 @@
+/**
+ * @file dmm.c
+ * @author Faiz Ur Rehman
+ * @brief Dynamic memory management library
+ * @version 1.0
+ * @date 2020-07-04
+ *
+ * @copyright Copyright (c) 2020
+ *
+ */
+/*	header files	***********************************************************/
+
+#include "dmm.h"
+#include <stdlib.h>
+
+/*	Private defines ***********************************************************/
+/*	Private macros ************************************************************/
+/*	Private enums *************************************************************/
+/*	Private structs	***********************************************************/
+/*	Private variables *********************************************************/
+/*	Private function prototypes ***********************************************/
+/*	Private function definitions **********************************************/
+/*	Eternal function definitions **********************************************/
+
+
+eDmmError_t eDmmMalloc( void** ppPtr, uint32_t ulSize )
+{
+	if ( ( *ppPtr != NULL ) || ( ppPtr == NULL ))
+	{
+		return eInvalidArgument;
+	}
+
+    *ppPtr = malloc( ulSize );
+
+    if ( *ppPtr == NULL )
+	{
+		return eMallocFail;
+	}
+
+	return eSuccess;
+}
+/******************************************************************************/
+
+eDmmError_t eDmmRealloc( void** ppPtr, uint32_t ulSize )
+{
+	void *pIntermediatePtr = NULL;
+
+	if ( ( *ppPtr != NULL ) || ( ppPtr == NULL ))
+	{
+		return eInvalidArgument;
+	}
+
+    pIntermediatePtr = realloc( *ppPtr, ulSize );
+
+    if ( pIntermediatePtr == NULL )
+	{
+		return eReallocFail;
+	}
+	*ppPtr = pIntermediatePtr;
+
+	return eSuccess;
+}
+/******************************************************************************/
+
+eDmmError_t eDmmFree( void** ppPtr )
+{
+	if ( ppPtr == NULL )
+	{
+		return eInvalidArgument;
+	}
+
+	free( ( void * ) *ppPtr );
+	*ppPtr = NULL;
+
+	return eSuccess;
+}
+/******************************************************************************/
