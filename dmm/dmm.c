@@ -27,17 +27,17 @@ eDmmError_t eDmmMalloc( void** ppPtr, uint32_t ulSize )
 {
 	if ( ( *ppPtr != NULL ) || ( ppPtr == NULL ))
 	{
-		return eInvalidArgument;
+		return eDMMInvalidArgument;
 	}
 
     *ppPtr = malloc( ulSize );
 
     if ( *ppPtr == NULL )
 	{
-		return eMallocFail;
+		return eDMMMallocFail;
 	}
 
-	return eSuccess;
+	return eDMMSuccess;
 }
 /******************************************************************************/
 
@@ -47,18 +47,18 @@ eDmmError_t eDmmRealloc( void** ppPtr, uint32_t ulSize )
 
 	if ( ( *ppPtr != NULL ) || ( ppPtr == NULL ))
 	{
-		return eInvalidArgument;
+		return eDMMInvalidArgument;
 	}
 
     pIntermediatePtr = realloc( *ppPtr, ulSize );
 
     if ( pIntermediatePtr == NULL )
 	{
-		return eReallocFail;
+		return eDMMReallocFail;
 	}
 	*ppPtr = pIntermediatePtr;
 
-	return eSuccess;
+	return eDMMSuccess;
 }
 /******************************************************************************/
 
@@ -66,12 +66,12 @@ eDmmError_t eDmmFree( void** ppPtr )
 {
 	if ( ppPtr == NULL )
 	{
-		return eInvalidArgument;
+		return eDMMInvalidArgument;
 	}
 
 	free( ( void * ) *ppPtr );
 	*ppPtr = NULL;
 
-	return eSuccess;
+	return eDMMSuccess;
 }
 /******************************************************************************/
