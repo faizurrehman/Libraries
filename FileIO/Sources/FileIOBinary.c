@@ -34,29 +34,30 @@
 /*	Private variables *********************************************************/
 /*	Private function prototypes ***********************************************/
 
-/** \brief validate and get filename
+/** @brief validate and get filename
  *
- * \param pucFilename: filename
- * \return success or error
+ * @param pucFilename: filename
+ * @param eFileFormat: file format
+ * @return success or error
  *
  */
 static eFileIOBinaryError_t eprvFileIOBinaryValidateAndGetFilename( char* pucFilename, eFileIOBinaryFormat_t eFileFormat, xFileBin_t* pxFile );
 
-/** \brief set file mode
+/** @brief set file mode
  *
- * \param eFileBinMode: binary file mode
- * \param pucMode: file mode string
- * \return success or error
+ * @param eFileBinMode: binary file mode
+ * @param pucMode: file mode string
+ * @return success or error
  *
  */
 static eFileIOBinaryError_t eprvFileIOBinarySetFileMode( eFileIOBinaryMode_t eFileBinMode, char* pucMode );
 
 
-/** \brief get file format
+/** @brief get file format
  *
- * \param eFileFormat: fie mormat enum
- * \param pucFormat: string pointer to store format
- * \return success or error
+ * @param eFileFormat: fie mormat enum
+ * @param pucFormat: string pointer to store format
+ * @return success or error
  *
  */
 static eFileIOBinaryError_t eprvFileIOBinaryGetFormat( eFileIOBinaryFormat_t eFileFormat, char* pucFormat );

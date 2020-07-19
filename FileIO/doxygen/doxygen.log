@@ -1,0 +1,2 @@
+D:/Projects/Libraries/FileIO/Includes/FileIO.h:74: warning: The following parameter of eFileIOCreateNewFile(char *pucFileName, eFileType_t eFileType, xFile_t *pxFile) is not documented:
+  parameter 'pxFile'

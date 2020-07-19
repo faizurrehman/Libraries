@@ -14,8 +14,7 @@
 #define FILEIOBINARY_H
 
 /*	External header files *****************************************************/
-
-#include "FileIO.h"
+#include <stdio.h>
 
 /*	External defines **********************************************************/
 /*	External macros ***********************************************************/
