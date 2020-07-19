@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1595137874 source:d:\projects\libraries\fileio\sources\fileio.c
+	"../Includes/FileIO.h"
+	<stdlib.h>
+
+1595140854 d:\projects\libraries\fileio\includes\fileio.h
+	<stdio.h>
+	<inttypes.h>
+	"FileIOAscii.h"
+	"FileIOBinary.h"
+
+1595051081 d:\projects\libraries\fileio\includes\fileioascii.h
+	"FileIO.h"
+	<inttypes.h>
+
+1595142193 d:\projects\libraries\fileio\includes\fileiobinary.h
+	"FileIO.h"
+
+1595051370 source:d:\projects\libraries\fileio\sources\fileioascii.c
+	"../Includes/FileIOAscii.h"
+	<stdlib.h>
+
+1595140765 source:d:\projects\libraries\fileio\sources\fileiobinary.c
+	"../Includes/FileIOBinary.h"
+	"dmm.h"
+	<stdlib.h>
+	<string.h>
+
+1595137521 d:\projects\libraries\realeased componenets\dmm\v100\includes\dmm.h
+	<inttypes.h>
+
